@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  test_dt: 2019-09-17 19:53:26
+  location: one
+  site_name: MyString
+  carrier: one
+  device_name: MyString
+  ping_ms: 1
+  download_mb: 9.99
+  upload_mb: 9.99
+  booster: MyString
+  external_antenna: MyString
+  comment: MyString
+
+two:
+  test_dt: 2019-09-17 19:53:26
+  location: two
+  site_name: MyString
+  carrier: two
+  device_name: MyString
+  ping_ms: 1
+  download_mb: 9.99
+  upload_mb: 9.99
+  booster: MyString
+  external_antenna: MyString
+  comment: MyString

@@ -1,0 +1,32 @@
+<%= form_with(model: location_report, local: true) do |form| %>
+  <% if location_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(location_report.errors.count, "error") %> prohibited this location_report from being saved:</h2>
+
+      <ul>
+        <% location_report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :speed_report_id %>
+    <%= form.text_field :speed_report_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hookups %>
+    <%= form.text_field :hookups %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

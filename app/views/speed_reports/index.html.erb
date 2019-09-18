@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Speed Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Test dt</th>
+      <th>Location</th>
+      <th>Site name</th>
+      <th>Carrier</th>
+      <th>Device name</th>
+      <th>Ping ms</th>
+      <th>Download mb</th>
+      <th>Upload mb</th>
+      <th>Booster</th>
+      <th>External antenna</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @speed_reports.each do |speed_report| %>
+      <tr>
+        <td><%= speed_report.test_dt %></td>
+        <td><%= speed_report.location_id %></td>
+        <td><%= speed_report.site_name %></td>
+        <td><%= speed_report.carrier_id %></td>
+        <td><%= speed_report.device_name %></td>
+        <td><%= speed_report.ping_ms %></td>
+        <td><%= speed_report.download_mb %></td>
+        <td><%= speed_report.upload_mb %></td>
+        <td><%= speed_report.booster %></td>
+        <td><%= speed_report.external_antenna %></td>
+        <td><%= speed_report.comment %></td>
+        <td><%= link_to 'Show', speed_report %></td>
+        <td><%= link_to 'Edit', edit_speed_report_path(speed_report) %></td>
+        <td><%= link_to 'Destroy', speed_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Speed Report', new_speed_report_path %>

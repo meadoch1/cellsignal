@@ -1,0 +1,2 @@
+module SpeedReportsHelper
+end

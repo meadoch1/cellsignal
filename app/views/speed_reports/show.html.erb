@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Test dt:</strong>
+  <%= @speed_report.test_dt %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @speed_report.location_id %>
+</p>
+
+<p>
+  <strong>Site name:</strong>
+  <%= @speed_report.site_name %>
+</p>
+
+<p>
+  <strong>Carrier:</strong>
+  <%= @speed_report.carrier_id %>
+</p>
+
+<p>
+  <strong>Device name:</strong>
+  <%= @speed_report.device_name %>
+</p>
+
+<p>
+  <strong>Ping ms:</strong>
+  <%= @speed_report.ping_ms %>
+</p>
+
+<p>
+  <strong>Download mb:</strong>
+  <%= @speed_report.download_mb %>
+</p>
+
+<p>
+  <strong>Upload mb:</strong>
+  <%= @speed_report.upload_mb %>
+</p>
+
+<p>
+  <strong>Booster:</strong>
+  <%= @speed_report.booster %>
+</p>
+
+<p>
+  <strong>External antenna:</strong>
+  <%= @speed_report.external_antenna %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @speed_report.comment %>
+</p>
+
+<%= link_to 'Edit', edit_speed_report_path(@speed_report) %> |
+<%= link_to 'Back', speed_reports_path %>

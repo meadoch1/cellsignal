@@ -1,0 +1,72 @@
+<%= form_with(model: speed_report, local: true) do |form| %>
+  <% if speed_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(speed_report.errors.count, "error") %> prohibited this speed_report from being saved:</h2>
+
+      <ul>
+        <% speed_report.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :test_dt %>
+    <%= form.datetime_select :test_dt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_id %>
+    <%= form.text_field :location_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :site_name %>
+    <%= form.text_field :site_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carrier_id %>
+    <%= form.text_field :carrier_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_name %>
+    <%= form.text_field :device_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ping_ms %>
+    <%= form.number_field :ping_ms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :download_mb %>
+    <%= form.text_field :download_mb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upload_mb %>
+    <%= form.text_field :upload_mb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :booster %>
+    <%= form.text_field :booster %>
+  </div>
+
+  <div class="field">
+    <%= form.label :external_antenna %>
+    <%= form.text_field :external_antenna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
